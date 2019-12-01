@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Stack</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="motivacional">Gosta de coisas nerds?  Curte programação? Resolver problemas e compartilhar e criar novos amigos?</string>
+    <string name="btn_cadastro">Cadastre-se</string>
+    <string name="name">Name</string>
+    <string name="registrar"> Registrar </string>
+
+    <!-- ABAS -->
+    <string name="post">POSTAR</string>
+    <string name="main">TIMELINE</string>
+
+</resources>
