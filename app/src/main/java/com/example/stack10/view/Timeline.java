@@ -31,6 +31,7 @@ import java.util.HashMap;
 public class Timeline extends AppCompatActivity {
 
     private ArrayList<Post> posts;
+    private ArrayList<String> keyPosts;
     private PostAdapter adapter;
 
     @Override
@@ -38,7 +39,7 @@ public class Timeline extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
         posts = new ArrayList<>();
-
+        keyPosts = new ArrayList<>();
         final ListView lista = findViewById(R.id.listPosts);
         //arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, titlePost);
         adapter = new PostAdapter(this, posts);
@@ -54,6 +55,7 @@ public class Timeline extends AppCompatActivity {
                 intent.putExtra("titulo", p.getTitulo());
                 intent.putExtra("post", p.getPost());
                 intent.putExtra("email", emailUser);
+                intent.putExtra("key", keyPosts.get(position));
                 startActivity(intent);
             }
         });
@@ -74,6 +76,7 @@ public class Timeline extends AppCompatActivity {
                     Post post = postSnap.getValue(Post.class);
                     if(post != null) {
                         posts.add(post);
+                        keyPosts.add(postSnap.getKey());
                         //arrayAdapter.add("Postado por: "+post.getNomeUser()+"\n"+post.getTitulo());
                        // arrayAdapter.notifyDataSetChanged();
                         adapter.notifyDataSetChanged();

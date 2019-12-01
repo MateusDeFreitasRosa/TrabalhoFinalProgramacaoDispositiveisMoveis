@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".view.question"></activity>
+        <activity android:name=".comentar"></activity>
+        <activity android:name=".view.question" />
         <activity android:name=".view.myQuestions" />
         <activity android:name=".view.Timeline" />
         <activity android:name=".view.createPost" />
